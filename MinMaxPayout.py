@@ -7,10 +7,12 @@ def maximalPayout(base_pay):
 
 	# Base case
 	pay = base_pay
-	distribution = [1] # pay one to the minimal employee
-	pay -= 1
+	pay -= 1 # Pay the minimal employee one.
 
-	lambsToPay, length, total, position = 1, 1, 1, 0
+	lambsToPay = 1
+	length = 1
+	total = 1
+	position = 0
 
 	while pay > 0:
 
@@ -38,9 +40,11 @@ def minimalPayout(base_pay):
 
 	# Base case
 	pay = base_pay
-	distribution = [1] # pay one to the minimal employee
-	pay -= 1
-	lambsToPay, length, total, position = 1, 1, 1, 0
+	pay -= 1 # Rule 1. Pay the first employee only 1.
+	lambsToPay = 1
+	length = 1
+	total = 1
+	position = 0
 	prevSubs = [0, 1]
 
 	while pay > 0:
